@@ -1,10 +1,12 @@
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
-(menu-bar-mode -1)
+(when (display-graphic-p)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+  (tooltip-mode -1)
+  (menu-bar-mode -1)
 
-;; Always load newest byte code
-(setq load-prefer-newer t)
+  )
+
+
 
 ; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
@@ -15,12 +17,18 @@
 
 (defvar root-dir (file-name-directory load-file-name)
   "The root dir of the emacs.d")
+(defvar dc-core-dir (expand-file-name "core" root-dir)
+  "The home of DC's core functionality.")
 
 
+;; add Core directories to Emacs's `load-path'
+(add-to-list 'load-path dc-core-dir)
+
+(require 'dc-core)
 
 ;; OSX specific settings
 (when (eq system-type 'darwin)
-  (require 'osx))
+  (require 'dc-macos))
 
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" root-dir))
