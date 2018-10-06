@@ -17,6 +17,8 @@
 
 (defvar root-dir (file-name-directory load-file-name)
   "The root dir of the emacs.d")
+(defvar prelude-dir root-dir
+  "Prelude root dir")
 (defvar dc-core-dir (expand-file-name "core" root-dir)
   "The home of DC's core functionality.")
 
@@ -24,7 +26,13 @@
 ;; add Core directories to Emacs's `load-path'
 (add-to-list 'load-path dc-core-dir)
 
+(require 'dc-packages)
+(require 'dc-custom) ;; Needs to be loaded before core, editor, and ui
+(require 'dc-ui)
 (require 'dc-core)
+(require 'dc-mode)
+(require 'dc-editor)
+(require 'dc-global-keybindings)
 
 ;; OSX specific settings
 (when (eq system-type 'darwin)
