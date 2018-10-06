@@ -36,4 +36,9 @@
                                             (abbreviate-file-name (buffer-file-name))
                                           "%b"))))
 
+(use-package solarized-theme
+  :config
+  (load-theme 'solarized-dark)
+  )
+
 (provide 'dc-ui)
