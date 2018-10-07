@@ -26,6 +26,8 @@
   "Prelude root dir")
 (defvar dc-core-dir (expand-file-name "core" root-dir)
   "The home of DC's core functionality.")
+(defvar prelude-savefile-dir (expand-file-name "savefile" prelude-dir)
+  "This folder stores all the automatically generated save/history-files.")
 
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" root-dir))
