@@ -14,6 +14,8 @@
 
 (setq use-package-always-ensure t)
 
-
+(use-package magit
+  :bind (("C-x g" . magit-status)
+	 ("C-x M-g" . magit-dispatch-popup)))
 
 (provide 'dc-packages)
