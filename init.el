@@ -27,6 +27,9 @@
 (defvar dc-core-dir (expand-file-name "core" root-dir)
   "The home of DC's core functionality.")
 
+;; config changes made through the customize UI will be stored here
+(setq custom-file (expand-file-name "custom.el" root-dir))
+(load custom-file)
 
 ;; add Core directories to Emacs's `load-path'
 (add-to-list 'load-path dc-core-dir)
@@ -42,9 +45,6 @@
 ;; OSX specific settings
 (when (eq system-type 'darwin)
   (require 'dc-macos))
-
-;; config changes made through the customize UI will be stored here
-(setq custom-file (expand-file-name "custom.el" root-dir))
 
 ;; load the personal settings (this includes `custom-file')
 ;(when (file-exists-p custom-file)
