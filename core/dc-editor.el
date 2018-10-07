@@ -25,6 +25,15 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+
+
+
+;; Disable backup files, I couldn't figure out how to make them go in the
+;; right location
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+(setq create-lockfiles nil) ; stop creating .#lockfile files
+
 ;; autosave the undo-tree history
 (setq undo-tree-history-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -45,6 +54,31 @@
   (delete-indentation 1))
 
 (global-set-key (kbd "C-S-j") 'top-join-line)
+
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
+(use-package diminish)
+
+(use-package smartparens
+  :config
+  ;; smart pairing for all
+  (require 'smartparens-config)
+  (setq sp-base-key-bindings 'paredit)
+  (setq sp-autoskip-closing-pair 'always)
+  (setq sp-hybrid-kill-entire-symbol nil)
+  (sp-use-paredit-bindings)
+  (show-smartparens-global-mode +1))
+
+;; automatically save buffers associated with files on buffer switch
+;; and on windows switch
+(defun prelude-auto-save-command ()
+  "Save the current buffer if `prelude-auto-save' is not nil."
+  (when (and prelude-auto-save
+             buffer-file-name
+             (buffer-modified-p (current-buffer))
+             (file-writable-p buffer-file-name))
+    (save-buffer)))
 
 
 
