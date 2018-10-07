@@ -42,6 +42,11 @@
 (require 'dc-editor)
 (require 'dc-global-keybindings)
 
+;; add module directories to `load-path'
+(add-to-list 'load-path (expand-file-name "modules" root-dir))
+
+(require 'dc-clojure)
+
 ;; OSX specific settings
 (when (eq system-type 'darwin)
   (require 'dc-macos))
