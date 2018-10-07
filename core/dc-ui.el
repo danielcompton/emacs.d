@@ -38,7 +38,6 @@
 
 (use-package solarized-theme
   :config
-  (load-theme 'solarized-dark)
-  )
+  (load-theme 'solarized-dark))
 
 (provide 'dc-ui)

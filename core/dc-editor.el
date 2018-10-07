@@ -36,6 +36,16 @@
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
 
+;; Begin Daniel's custom editing shortcuts
+
+;; http://emacsredux.com/blog/2013/05/30/joining-lines/
+(defun top-join-line ()
+  "Join the current line with the line beneath it."
+  (interactive)
+  (delete-indentation 1))
+
+(global-set-key (kbd "C-S-j") 'top-join-line)
+
 
 
 (provide 'dc-editor)
