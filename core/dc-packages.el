@@ -37,14 +37,17 @@
 (use-package ace-window
   :bind (("s-w" . ace-window))
   :config
-  (global-set-key [remap other-window] 'ace-window))
+  (global-set-key [remap other-window] 'ace-window)
+  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 (use-package super-save
   :config
   (super-save-mode +1)
-  (add-to-list 'super-save-triggers 'ace-window))
-
-
+  (add-to-list 'super-save-triggers 'ace-window)
+  (add-to-list 'super-save-triggers 'magit-status)
+  (setq super-save-auto-save-when-idle t
+        super-save-idle-duration 5)
+  :after (magit ace-window))
 
 
 
