@@ -34,6 +34,15 @@
   (setq projectile-cache-file (expand-file-name  "projectile.cache" prelude-savefile-dir))
   (projectile-mode 1))
 
+(use-package ace-window
+  :bind (("s-w" . ace-window))
+  :config
+  (global-set-key [remap other-window] 'ace-window))
+
+(use-package super-save
+  :config
+  (super-save-mode +1)
+  (add-to-list 'super-save-triggers 'ace-window))
 
 
 
