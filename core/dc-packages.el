@@ -49,6 +49,13 @@
         super-save-idle-duration 5)
   :after (magit ace-window))
 
-
+(use-package auto-dim-other-buffers
+  :config
+  (auto-dim-other-buffers-mode t)
+  (setq auto-dim-other-buffers-dim-on-switch-to-minibuffer nil
+        ;; Solarized-dark base03 is #002b36, this tints the background
+        ;; slightly further to help detect the difference between the
+        ;; focused buffer and the rest.
+        auto-dim-other-buffers-face '((t (:background "#002630")))))
 
 (provide 'dc-packages)
