@@ -75,6 +75,7 @@
 
 (use-package swiper
   :pin melpa
+  :after (ivy)
   :bind (("C-s" . swiper)))
 
 (use-package counsel
@@ -86,8 +87,11 @@
          ("C-h v" . counsel-describe-variable)
          )
   :config
-  (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
-  )
+  (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
+
+(use-package ivy-hydra
+  :pin melpa
+  :after(ivy))
 
 (use-package projectile-ripgrep
   :after (projectile)
