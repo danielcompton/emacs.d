@@ -64,4 +64,27 @@
         ;; focused buffer and the rest.
         auto-dim-other-buffers-face '((t (:background "#002630")))))
 
+(use-package ivy
+  :pin melpa
+  :after (projectile)
+  :bind (("C-c C-r" . ivy-resume))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers 1
+        projectile-completion-system 'ivy))
+
+(use-package swiper
+  :pin melpa
+  :bind (("C-s" . swiper)))
+
+(use-package counsel
+  :pin melpa
+  :after (ivy)
+  :bind (("M-x" . counsel-M-x)
+         ("C-x C-f" . counsel-find-file)
+         )
+  :config
+  (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+  )
+
 (provide 'dc-packages)
