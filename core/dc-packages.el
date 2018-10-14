@@ -82,9 +82,21 @@
   :after (ivy)
   :bind (("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
+         ("C-h f" . counsel-describe-function)
+         ("C-h v" . counsel-describe-variable)
          )
   :config
   (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
   )
+
+(use-package projectile-ripgrep
+  :after (projectile)
+  )
+
+(use-package markdown-mode
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)))
 
 (provide 'dc-packages)
