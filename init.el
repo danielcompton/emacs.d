@@ -20,17 +20,17 @@
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 
-(defvar root-dir (file-name-directory load-file-name)
+(defvar dc-root-dir (file-name-directory load-file-name)
   "The root dir of the emacs.d")
-(defvar prelude-dir root-dir
+(defvar prelude-dir dc-root-dir
   "Prelude root dir")
-(defvar dc-core-dir (expand-file-name "core" root-dir)
+(defvar dc-core-dir (expand-file-name "core" dc-root-dir)
   "The home of DC's core functionality.")
 (defvar prelude-savefile-dir (expand-file-name "savefile" prelude-dir)
   "This folder stores all the automatically generated save/history-files.")
 
 ;; config changes made through the customize UI will be stored here
-(setq custom-file (expand-file-name "custom.el" root-dir))
+(setq custom-file (expand-file-name "custom.el" dc-root-dir))
 (load custom-file)
 
 ;; add Core directories to Emacs's `load-path'
@@ -45,7 +45,7 @@
 (require 'dc-global-keybindings)
 
 ;; add module directories to `load-path'
-(add-to-list 'load-path (expand-file-name "modules" root-dir))
+(add-to-list 'load-path (expand-file-name "modules" dc-root-dir))
 
 (require 'dc-clojure)
 
