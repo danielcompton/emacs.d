@@ -43,8 +43,7 @@
 (use-package avy
   :bind (("C-:" . avy-goto-char)
          ("C-'" . avy-goto-char-2)
-         ("M-g f" . avy-goto-line)
-         ))
+         ("M-g f" . avy-goto-line)))
 
 (use-package super-save
   :config
@@ -102,5 +101,9 @@
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
+
+(use-package beacon
+  :config
+  (beacon-mode 1))
 
 (provide 'dc-packages)
