@@ -106,4 +106,7 @@
   :config
   (beacon-mode 1))
 
+(use-package terraform-mode
+  :mode (("\\.tf\\'" . terraform-mode)))
+
 (provide 'dc-packages)
