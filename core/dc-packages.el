@@ -47,11 +47,11 @@
 
 (use-package super-save
   :config
-  (super-save-mode +1)
   (add-to-list 'super-save-triggers 'ace-window)
   (add-to-list 'super-save-triggers 'magit-status)
   (setq super-save-auto-save-when-idle t
         super-save-idle-duration 5)
+  (super-save-mode +1)
   :after (magit ace-window))
 
 (use-package auto-dim-other-buffers
@@ -76,6 +76,9 @@
   :pin melpa
   :after (ivy)
   :bind (("C-s" . swiper)))
+
+(use-package amx
+  :pin melpa)
 
 (use-package counsel
   :pin melpa
