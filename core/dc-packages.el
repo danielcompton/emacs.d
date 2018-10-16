@@ -28,6 +28,7 @@
 	 ("C-x M-g" . magit-dispatch-popup)))
 
 (use-package projectile
+  :pin melpa
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -107,7 +108,14 @@
 
 (use-package beacon
   :config
+  (setq beacon-blink-when-focused 1)
   (beacon-mode 1))
+
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode +1)
+  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 (use-package terraform-mode
   :mode (("\\.tf\\'" . terraform-mode)))
