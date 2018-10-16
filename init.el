@@ -7,11 +7,8 @@
   )
 
 
-
-
-
-
-
+(when (not (eq 'maximized (frame-parameter nil 'fullscreen)))
+  (toggle-frame-maximized))
 
 ; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
