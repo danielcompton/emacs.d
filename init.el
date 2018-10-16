@@ -29,6 +29,10 @@
 (defvar prelude-savefile-dir (expand-file-name "savefile" prelude-dir)
   "This folder stores all the automatically generated save/history-files.")
 
+;; Fish is a little slow to startup for Projectile
+(setq explicit-shell-file-name "/bin/sh")
+(setq shell-file-name "/bin/sh")
+
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" dc-root-dir))
 (load custom-file)
