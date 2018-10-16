@@ -47,6 +47,12 @@
 ;; add module directories to `load-path'
 (add-to-list 'load-path (expand-file-name "modules" dc-root-dir))
 
+
+(add-to-list 'load-path (expand-file-name "vendor" dc-root-dir))
+(autoload 'circleci "circleci" "List CircleCI builds" t)
+(autoload 'circleci-latest "circleci" "Show CircleCI build output" t)
+
+
 (require 'dc-clojure)
 
 ;; OSX specific settings
