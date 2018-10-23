@@ -100,6 +100,12 @@
   :after (projectile)
   )
 
+(use-package projectile-git-autofetch
+  :after (projectile)
+  :config
+  (projectile-git-autofetch-mode 1)
+  (setq projectile-git-autofetch-timeout 30)
+
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
@@ -123,6 +129,9 @@
 (use-package company
   :config
   (add-hook 'after-init-hook 'global-company-mode))
+
+(use-package company-quickhelp
+  :config (company-quickhelp-mode 1))
 
 (use-package company-terraform
   :pin melpa
