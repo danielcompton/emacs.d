@@ -54,7 +54,8 @@
   (setq super-save-auto-save-when-idle t
         super-save-idle-duration 5)
   (super-save-mode +1)
-  :after (magit ace-window))
+  :after (magit ace-window)
+  :diminish super-save-mode)
 
 (use-package auto-dim-other-buffers
   :config
