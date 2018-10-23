@@ -101,10 +101,16 @@
   )
 
 (use-package projectile-git-autofetch
+  :pin melpa
   :after (projectile)
   :config
   (projectile-git-autofetch-mode 1)
-  (setq projectile-git-autofetch-timeout 30)
+  (setq projectile-git-autofetch-timeout 30
+        ;; I get an error when this tries to notify after a fetch:
+        ;; error in process sentinel: alert-message-notify: Not enough arguments for format string
+        ;; but I don't really want a notification anyway, so I'll just disable this.
+        ;; I think it's related to https://github.com/jwiegley/alert/issues/38
+        projectile-git-autofetch-notify nil))
 
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
