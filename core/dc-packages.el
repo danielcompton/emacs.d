@@ -147,4 +147,10 @@
   :config
   (company-terraform-init))
 
+(use-package org-journal
+  :config
+  (setq org-journal-dir "~/Dropbox/org/journal/"
+        org-journal-file-format "%Y-%m-%d.org"
+        org-journal-date-format "%Y-%m-%d, %A"))
+
 (provide 'dc-packages)
