@@ -68,7 +68,7 @@
         ;; Solarized-dark base03 is #002b36, this tints the background
         ;; slightly further to help detect the difference between the
         ;; focused buffer and the rest.
-        auto-dim-other-buffers-face '((t (:background "#002630")))))
+        auto-dim-other-buffers-face '((t (:background "#052831")))))
 
 (use-package ivy
   :pin melpa
