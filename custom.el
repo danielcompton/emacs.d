@@ -8,7 +8,7 @@
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell org-journal company-quickhelp projectile-git-autofetch company-terraform company company-mode diff-hl amx terraform-mode ivy-hydra markdown-mode projectile-ripgrep beacon counsel swiper ivy auto-dim-other-buffers ace-window super-save cider clojure-mode smartparens smart-parens diminish projectile magit use-package solarized-theme)))
+    (forge exec-path-from-shell org-journal company-quickhelp projectile-git-autofetch company-terraform company company-mode diff-hl amx terraform-mode ivy-hydra markdown-mode projectile-ripgrep beacon counsel swiper ivy auto-dim-other-buffers ace-window super-save cider clojure-mode smartparens smart-parens diminish projectile magit use-package solarized-theme)))
  '(safe-local-variable-values
    (quote
     ((cider-refresh-after-fn . "reloaded.repl/resume")

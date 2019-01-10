@@ -27,6 +27,9 @@
   :bind (("C-x g" . magit-status)
 	 ("C-x M-g" . magit-dispatch-popup)))
 
+(use-package forge
+  :pin melpa)
+
 (use-package projectile
   :pin melpa
   :config
