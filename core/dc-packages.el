@@ -24,6 +24,7 @@
 (setq use-package-always-ensure t)
 
 (use-package magit
+  :pin melpa
   :bind (("C-x g" . magit-status)
 	 ("C-x M-g" . magit-dispatch-popup)))
 
