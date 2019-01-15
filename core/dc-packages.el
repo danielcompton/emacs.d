@@ -32,7 +32,6 @@
   :pin melpa)
 
 (use-package projectile
-  :pin melpa
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -72,7 +71,6 @@
         auto-dim-other-buffers-face '((t (:background "#052831")))))
 
 (use-package ivy
-  :pin melpa
   :after (projectile)
   :bind (("C-c C-r" . ivy-resume))
   :config
@@ -81,7 +79,6 @@
         projectile-completion-system 'ivy))
 
 (use-package swiper
-  :pin melpa
   :after (ivy)
   :bind (("C-s" . swiper)))
 
@@ -89,14 +86,13 @@
   :pin melpa)
 
 (use-package counsel
-  :pin melpa
   :after (ivy)
   :bind (("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
          ("C-h f" . counsel-describe-function)
-         ("C-h v" . counsel-describe-variable)
-         )
+         ("C-h v" . counsel-describe-variable))
   :config
+  (counsel-mode 1)
   (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
 
 (use-package ivy-hydra
@@ -104,8 +100,7 @@
   :after(ivy))
 
 (use-package projectile-ripgrep
-  :after (projectile)
-  )
+  :after (projectile))
 
 (use-package projectile-git-autofetch
   :pin melpa
