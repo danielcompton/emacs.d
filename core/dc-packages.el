@@ -32,6 +32,7 @@
   :pin melpa)
 
 (use-package projectile
+  :demand t
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -52,14 +53,14 @@
 
 (use-package super-save
   :diminish super-save-mode
+  :after (magit ace-window)
+  :demand t
   :config
   (add-to-list 'super-save-triggers 'ace-window)
   (add-to-list 'super-save-triggers 'magit-status)
   (setq super-save-auto-save-when-idle t
         super-save-idle-duration 5)
-  (super-save-mode +1)
-  :after (magit ace-window)
-  :diminish super-save-mode)
+  (super-save-mode +1))
 
 (use-package auto-dim-other-buffers
   :config
@@ -70,23 +71,25 @@
         ;; focused buffer and the rest.
         auto-dim-other-buffers-face '((t (:background "#052831")))))
 
+(use-package diminish)
+
 (use-package ivy
-  :after (projectile)
   :bind (("C-c C-r" . ivy-resume))
+  :after (projectile)
+  :demand t
   :config
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers 1
         projectile-completion-system 'ivy))
 
 (use-package swiper
-  :after (ivy)
   :bind (("C-s" . swiper)))
 
 (use-package amx
   :pin melpa)
 
 (use-package counsel
-  :after (ivy)
+  :demand t
   :bind (("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
          ("C-h f" . counsel-describe-function)
@@ -97,7 +100,7 @@
 
 (use-package ivy-hydra
   :pin melpa
-  :after(ivy))
+  :after (ivy))
 
 (use-package projectile-ripgrep
   :after (projectile))
