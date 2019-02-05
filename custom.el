@@ -72,7 +72,8 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (forge
+    (projectile
+     forge
      exec-path-from-shell
      org-journal
      company-quickhelp
@@ -98,14 +99,14 @@ A prefix argument specifies pretty-printing."
      smartparens
      smart-parens
      diminish
-     projectile
      magit
      use-package
      solarized-theme
      )))
  '(safe-local-variable-values
    (quote
-    ((cider-refresh-after-fn
+    ((checkdoc-package-keywords-flag)
+     (cider-refresh-after-fn
       .
       "reloaded.repl/resume")
      (cider-refresh-before-fn
