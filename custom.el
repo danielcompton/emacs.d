@@ -41,10 +41,11 @@
 
 ;; https://emacs.stackexchange.com/questions/16490/emacs-let-bound-advice
 
-;; (advice-add 'custom-save-variables :around
-;;             (lambda ()
-;;               (cl-letf (((symbol-function 'indent-pp-sexp) #'dc-indent-pp-sexp))
-;;                 )))
+(defun wrap-dc-pp (old-function &rest arguments)
+  (cl-letf (((symbol-function 'indent-pp-sexp) #'dc-indent-pp-sexp))
+    (apply old-function arguments)))
+
+(advice-add #'custom-save-variables :around #'wrap-dc-pp)
 
 (defun dc-indent-pp-sexp (&optional arg)
   "Indent each line of the list starting just after point, or prettyprint it.
@@ -101,8 +102,7 @@ A prefix argument specifies pretty-printing."
      diminish
      magit
      use-package
-     solarized-theme
-     )))
+     solarized-theme)))
  '(safe-local-variable-values
    (quote
     ((checkdoc-package-keywords-flag)
