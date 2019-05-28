@@ -105,7 +105,67 @@ A prefix argument specifies pretty-printing."
      solarized-theme)))
  '(safe-local-variable-values
    (quote
-    ((checkdoc-package-keywords-flag)
+    ((cider-cljs-repl-types
+      (edge
+       "(do (require 'dev-extras) ((resolve 'dev-extras/cljs-repl)))"))
+     (cider-repl-init-code
+      "(dev)")
+     (cider-ns-refresh-after-fn
+      .
+      "dev-extras/resume")
+     (cider-ns-refresh-before-fn
+      .
+      "dev-extras/suspend")
+     (elisp-lint-indent-specs
+      (if-let*
+          .
+          2)
+      (when-let*
+          .
+        1)
+      (let*
+          .
+        defun)
+      (nrepl-dbind-response
+          .
+          2)
+      (cider-save-marker
+          .
+        1)
+      (cider-propertize-region
+          .
+        1)
+      (cider-map-repls
+          .
+        1)
+      (cider--jack-in
+       .
+       1)
+      (cider--make-result-overlay
+          .
+        1)
+      (insert-label
+       .
+       defun)
+      (insert-align-label
+       .
+       defun)
+      (insert-rect
+       .
+       defun)
+      (cl-defun
+          .
+          2)
+      (with-parsed-tramp-file-name
+          .
+          2)
+      (thread-first
+          .
+        1)
+      (thread-last
+          .
+        1))
+     (checkdoc-package-keywords-flag)
      (cider-refresh-after-fn
       .
       "reloaded.repl/resume")
