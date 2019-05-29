@@ -1,3 +1,7 @@
+;; This block of code pretty prints custom-set-variables so that you can avoid merge conflicts.
+;; It is based off indent-pp-sexp, but with some tweaks to the printing algorithm to print more
+;; vertically.
+
 (defun dc-pp-buffer ()
   "Prettify the current buffer with printed representation of a Lisp object."
   (goto-char (point-min))
@@ -60,6 +64,8 @@ A prefix argument specifies pretty-printing."
           (if (eq (char-before) ?\n)
               (delete-char -1)))))
   (indent-sexp))
+
+;;;
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
