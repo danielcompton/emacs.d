@@ -73,7 +73,8 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (projectile
+    (editorconfig
+     projectile
      forge
      exec-path-from-shell
      org-journal

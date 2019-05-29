@@ -156,4 +156,9 @@
         org-journal-file-format "%Y-%m-%d.org"
         org-journal-date-format "%Y-%m-%d, %A"))
 
+(use-package editorconfig
+  :diminish editorconfig-mode
+  :config
+  (editorconfig-mode 1))
+
 (provide 'dc-packages)
