@@ -37,7 +37,8 @@
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (setq projectile-cache-file (expand-file-name  "projectile.cache" prelude-savefile-dir)
-        projectile-sort-order 'access-time)
+        projectile-indexing-method 'hybrid
+        projectile-sort-order 'recently-active)
   (projectile-mode 1))
 
 (use-package ace-window
