@@ -52,7 +52,7 @@ ripgrep-0.4.0
 s-1.12.0
 sesman-0.3.4
 smartparens-1.11.0
-solarized-theme-1.2.2
+solarized-theme-1.3.0
 spinner-1.7.3
 spinner-1.7.3.signed
 super-save-0.3.0
