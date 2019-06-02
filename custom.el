@@ -117,7 +117,6 @@ A prefix argument specifies pretty-printing."
      ace-window
      super-save
      cider
-     clojure-mode
      smartparens
      smart-parens
      diminish
