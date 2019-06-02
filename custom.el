@@ -127,6 +127,9 @@ A prefix argument specifies pretty-printing."
    (quote
     ((cider-cljs-repl-types
       (edge
+       "(do (require 'dev-extras) ((resolve 'dev-extras/cljs-repl) \"app\"))"))
+     (cider-cljs-repl-types
+      (edge
        "(do (require 'dev-extras) ((resolve 'dev-extras/cljs-repl)))"))
      (cider-repl-init-code
       "(dev)")
