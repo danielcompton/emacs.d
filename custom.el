@@ -65,6 +65,19 @@ A prefix argument specifies pretty-printing."
               (delete-char -1)))))
   (indent-sexp))
 
+;; Write a list of installed packages to a file every time packages are installed
+;; or removed. This is a little inefficient when it is taking place as part of
+;; a transaction, as it will run every time instead of just at the end, but it
+;; covers other cases where install/delete are not run in a transaction.
+;; This is about as close as we can get to a lockfile at the moment, at least I'll
+;; have a record of which packages were installed.
+
+(defun write-installed-packages-to-file (&rest arguments)
+  (shell-command "ls ~/.emacs.d/elpa/ > installed-packages.txt"))
+
+(advice-add #'package-install :after #'write-installed-packages-to-file)
+(advice-add #'package-delete :after #'write-installed-packages-to-file)
+
 ;;;
 
 (custom-set-variables
