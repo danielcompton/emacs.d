@@ -73,7 +73,7 @@ A prefix argument specifies pretty-printing."
 ;; have a record of which packages were installed.
 
 (defun write-installed-packages-to-file (&rest arguments)
-  (shell-command "ls ~/.emacs.d/elpa/ > installed-packages.txt"))
+  (shell-command "ls ~/.emacs.d/elpa/ > ~/.emacs.d/installed-packages.txt"))
 
 (advice-add #'package-install :after #'write-installed-packages-to-file)
 (advice-add #'package-delete :after #'write-installed-packages-to-file)
