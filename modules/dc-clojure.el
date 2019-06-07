@@ -31,5 +31,9 @@
      (add-hook 'cider-repl-mode-hook (lambda ()
                                        (run-hooks 'prelude-cider-repl-mode-hook)))))
 
+(use-package sayid)
+
+(eval-after-load 'clojure-mode
+  '(sayid-setup-package))
 
 (provide 'dc-clojure)

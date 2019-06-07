@@ -51,6 +51,7 @@ queue-0.2
 queue-0.2.signed
 ripgrep-0.4.0
 s-1.12.0
+sayid-0.0.17
 sesman-0.3.4
 smartparens-1.11.0
 solarized-theme-1.3.0
