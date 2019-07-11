@@ -25,6 +25,8 @@ emacsql-3.0.0
 emacsql-sqlite-3.0.0
 epl-0.9
 exec-path-from-shell-1.12
+flycheck-31
+flycheck-clj-kondo-0.0.2
 forge-20190529.813
 ghub-20190529.1038
 ghub-3.2.0

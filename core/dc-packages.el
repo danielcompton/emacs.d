@@ -162,4 +162,9 @@
   :config
   (editorconfig-mode 1))
 
+(use-package flycheck
+  :config
+  (global-flycheck-mode 1))
+
 (provide 'dc-packages)
+;;; dc-packages.el ends here

@@ -36,4 +36,8 @@
 (eval-after-load 'clojure-mode
   '(sayid-setup-package))
 
+(use-package flycheck-clj-kondo
+  :config
+  (require 'flycheck-clj-kondo))
+
 (provide 'dc-clojure)

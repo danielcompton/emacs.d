@@ -93,7 +93,10 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (sayid
+    (flycheck-clj-kondo
+     flycheck
+     flycheck-clj-condo
+     sayid
      editorconfig
      projectile
      forge
@@ -126,7 +129,9 @@ A prefix argument specifies pretty-printing."
      solarized-theme)))
  '(safe-local-variable-values
    (quote
-    ((cider-cljs-repl-types
+    ((auto-fill-mode
+      t)
+     (cider-cljs-repl-types
       (edge
        "(do (require 'dev-extras) ((resolve 'dev-extras/cljs-repl) \"app\"))"))
      (cider-cljs-repl-types
