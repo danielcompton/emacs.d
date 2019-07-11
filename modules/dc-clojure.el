@@ -14,7 +14,9 @@
                                     (run-hooks 'prelude-clojure-mode-hook)))))
 
 
-(use-package cider)
+(use-package cider
+  :config
+  (setq cider-save-file-on-load t))
 
 (eval-after-load 'cider
   '(progn
