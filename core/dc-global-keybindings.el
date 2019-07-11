@@ -8,9 +8,9 @@
 (global-set-key (kbd "s-q") 'save-buffers-kill-emacs) ;; quit
 (global-set-key (kbd "s-a") 'mark-whole-buffer)       ;; select all
 (global-set-key (kbd "s-z") 'undo) ;; undo
-(global-set-key (kbc "s-v") 'yank) ;; paste
+(global-set-key (kbd "s-v") 'yank) ;; paste
 (global-set-key (kbd "s-x") 'kill-region) ;; cut
-(global-set-key (kbc "s-c") 'copy-region-as-kill) ;; copy
+(global-set-key (kbd "s-c") 'copy-region-as-kill) ;; copy
 
 
 ;; Comment line or region.
