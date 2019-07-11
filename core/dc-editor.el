@@ -58,6 +58,28 @@
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
+;; Kill line with CMD-Backspace. Note that thanks to Simpleclip, killing doesn't rewrite the system clipboard.
+;; Kill one word with Alt+Backspace.
+;; Kill forward word with Alt-Shift-Backspace.
+(global-set-key (kbd "s-<backspace>") 'kill-whole-line)
+(global-set-key (kbd "M-S-<backspace>") 'kill-word)
+
+;; Use Cmd for movement and selection.
+(global-set-key (kbd "s-<right>") (kbd "C-e"))        ;; End of line
+(global-set-key (kbd "S-s-<right>") (kbd "C-S-e"))    ;; Select to end of line
+(global-set-key (kbd "s-<left>") (kbd "M-m"))         ;; Beginning of line (first non-whitespace character)
+(global-set-key (kbd "S-s-<left>") (kbd "M-S-m"))     ;; Select to beginning of line
+
+(global-set-key (kbd "s-<up>") 'beginning-of-buffer)  ;; First line
+(global-set-key (kbd "s-<down>") 'end-of-buffer)      ;; Last line
+
+(global-set-key (kbd "s-{") 'previous-buffer)
+(global-set-key (kbd "s-}") 'next-buffer)
+
+(use-package crux
+  :config
+  (global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line))
+
 (use-package diminish)
 
 (use-package smartparens

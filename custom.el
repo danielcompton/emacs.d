@@ -93,7 +93,8 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (flycheck-clj-kondo
+    (crux
+     flycheck-clj-kondo
      flycheck
      flycheck-clj-condo
      sayid
