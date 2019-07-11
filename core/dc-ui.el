@@ -16,6 +16,13 @@
 ;; disable startup screen
 (setq inhibit-startup-screen t)
 
+;; Hide the cursor in inactive windows
+;; This is buffer-local, not sure how to set it globally.
+; (setq cursor-in-non-selected-windows nil)
+
+;; Empty scratch buffer
+(setq initial-scratch-message nil)
+
 ;; nice scrolling
 (setq scroll-margin 0
       scroll-conservatively 100000
