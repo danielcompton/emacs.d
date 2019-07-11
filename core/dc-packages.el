@@ -141,7 +141,9 @@
 
 (use-package company
   :config
-  (add-hook 'after-init-hook 'global-company-mode))
+  (add-hook 'after-init-hook 'global-company-mode)
+  (setq company-idle-delay 0.1
+        company-minimum-prefix-length 1))
 
 (use-package company-quickhelp
   :config (company-quickhelp-mode 1))
