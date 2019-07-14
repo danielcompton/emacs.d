@@ -55,6 +55,7 @@
 
 
 (require 'dc-clojure)
+(require 'dc-emacs-lisp)
 
 ;; OSX specific settings
 (when (eq system-type 'darwin)
