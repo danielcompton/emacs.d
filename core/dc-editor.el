@@ -80,8 +80,6 @@
   :config
   (global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line))
 
-(use-package diminish)
-
 (use-package smartparens
   :config
   ;; smart pairing for all
@@ -103,7 +101,7 @@
     (save-buffer)))
 
 (defun split-window-sensibly-prefer-horizontal (&optional window)
-"Based on split-window-sensibly, but designed to prefer a horizontal split,
+  "Based on `split-window-sensibly', but designed to prefer a horizontal split,
 i.e. windows tiled side-by-side."
 ;; From https://emacs.stackexchange.com/a/40517
   (let ((window (or window (selected-window))))
@@ -145,7 +143,7 @@ i.e. windows tiled side-by-side."
 
 (setq
    split-height-threshold 4
-   split-width-threshold 40 
+   split-width-threshold 40
    split-window-preferred-function 'split-window-really-sensibly)
 
 (provide 'dc-editor)
