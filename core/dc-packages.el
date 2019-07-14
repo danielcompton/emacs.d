@@ -64,6 +64,7 @@
   (super-save-mode +1))
 
 (use-package auto-dim-other-buffers
+  :diminish auto-dim-other-buffers-mode
   :config
   (auto-dim-other-buffers-mode t)
   (setq auto-dim-other-buffers-dim-on-switch-to-minibuffer nil
@@ -78,6 +79,7 @@
   :bind (("C-c C-r" . ivy-resume))
   :after (projectile)
   :demand t
+  :diminish ivy-mode
   :config
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers 1
@@ -90,6 +92,7 @@
   :pin melpa)
 
 (use-package counsel
+  :diminish counsel-mode
   :demand t
   :bind (("M-x" . counsel-M-x)
          ("s-P" . counsel-M-x)
@@ -127,6 +130,7 @@
          ("\\.markdown\\'" . markdown-mode)))
 
 (use-package beacon
+  :diminish beacon-mode
   :config
   (setq beacon-blink-when-focused 1)
   (beacon-mode 1))
@@ -141,6 +145,7 @@
   :mode (("\\.tf\\'" . terraform-mode)))
 
 (use-package company
+  :diminish company-mode
   :config
   (add-hook 'after-init-hook 'global-company-mode)
   (setq company-idle-delay 0.1
@@ -166,6 +171,7 @@
   (editorconfig-mode 1))
 
 (use-package flycheck
+  :diminish flycheck-mode
   :config
   (global-flycheck-mode 1))
 
