@@ -19,6 +19,7 @@ counsel-20190527.1406
 crux-0.3.0
 dash-2.16.0
 dash-20190424.1804
+deadgrep-0.7
 diff-hl-1.8.6
 diminish-0.45
 editorconfig-0.8.0

@@ -146,4 +146,8 @@ i.e. windows tiled side-by-side."
    split-width-threshold 40
    split-window-preferred-function 'split-window-really-sensibly)
 
+(use-package deadgrep
+  :config
+  (global-set-key (kbd "<f5>") #'deadgrep))
+
 (provide 'dc-editor)
