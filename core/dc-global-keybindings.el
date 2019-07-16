@@ -12,6 +12,7 @@
 (global-set-key (kbd "s-x") 'kill-region) ;; cut
 (global-set-key (kbd "s-c") 'copy-region-as-kill) ;; copy
 
+(global-set-key (kbd "M-<delete>") 'kill-word) ;; M-delete is a delete forward on macOS.
 
 ;; Comment line or region.
 (global-set-key (kbd "s-/") 'comment-line)
