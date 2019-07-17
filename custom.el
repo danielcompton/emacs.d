@@ -133,7 +133,10 @@ A prefix argument specifies pretty-printing."
      solarized-theme)))
  '(safe-local-variable-values
    (quote
-    ((auto-fill-mode
+    ((cider-ns-refresh-after-fn
+      .
+      "dev/resume")
+     (auto-fill-mode
       t)
      (cider-cljs-repl-types
       (edge
