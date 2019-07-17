@@ -25,6 +25,8 @@
 
 (use-package magit
   :pin melpa
+  :config
+  (setq magit-list-refs-sortby "-creatordate")
   :bind (("C-x g" . magit-status)
 	 ("C-x M-g" . magit-dispatch-popup)))
 
