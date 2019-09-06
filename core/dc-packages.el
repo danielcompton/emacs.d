@@ -179,5 +179,13 @@
   :config
   (global-flycheck-mode 1))
 
+(use-package windmove
+  :bind (("M-s-<left>" . windmove-left)
+         ("M-s-<right>" . windmove-right)
+         ("M-s-<up>" . windmove-up)
+         ("M-s-<down>" . windmove-down))
+  :config
+  (setq windmove-wrap-around t))
+
 (provide 'dc-packages)
 ;;; dc-packages.el ends here
