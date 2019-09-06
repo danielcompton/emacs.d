@@ -94,8 +94,7 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (clj-refactor
-     deadgrep
+    (deadgrep
      crux
      flycheck-clj-kondo
      flycheck
@@ -133,7 +132,10 @@ A prefix argument specifies pretty-printing."
      solarized-theme)))
  '(safe-local-variable-values
    (quote
-    ((cider-ns-refresh-after-fn
+    ((cider-ns-refresh-before-fn
+      .
+      "dev/suspend")
+     (cider-ns-refresh-after-fn
       .
       "dev/resume")
      (auto-fill-mode

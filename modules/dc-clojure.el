@@ -8,9 +8,9 @@
        (subword-mode +1)
 
        ;; Setup clj-refactor
-       (clj-refactor-mode 1)
-       (yas-minor-mode 1)
-       (cljr-add-keybindings-with-prefix "C-c C-m")
+       ;; (clj-refactor-mode 1)
+       ;; (yas-minor-mode 1)
+       ;; (cljr-add-keybindings-with-prefix "C-c C-m")
 
        (run-hooks 'prelude-lisp-coding-hook))
 
@@ -48,6 +48,6 @@
   :config
   (require 'flycheck-clj-kondo))
 
-(use-package clj-refactor)
+;(use-package clj-refactor)
 
 (provide 'dc-clojure)
