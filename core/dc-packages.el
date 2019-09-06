@@ -26,7 +26,9 @@
 (use-package magit
   :pin melpa
   :config
-  (setq magit-list-refs-sortby "-creatordate")
+  (setq magit-list-refs-sortby "-creatordate"
+        ;; Don't reset window layout when burying magit buffer.
+        magit-bury-buffer-function 'magit-mode-quit-window)
   :bind (("C-x g" . magit-status)
 	 ("C-x M-g" . magit-dispatch-popup)))
 
