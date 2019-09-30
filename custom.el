@@ -94,7 +94,8 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (deadgrep
+    (clj-refactor
+     deadgrep
      crux
      flycheck-clj-kondo
      flycheck
