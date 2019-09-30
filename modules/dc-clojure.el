@@ -21,8 +21,10 @@
 
 
 (use-package cider
+  :bind ("s-r" . cider-ns-refresh)
   :config
-  (setq cider-save-file-on-load t))
+  (setq cider-save-file-on-load t
+        cider-ns-save-files-on-refresh t))
 
 (eval-after-load 'cider
   '(progn
