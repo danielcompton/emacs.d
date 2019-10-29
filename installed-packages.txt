@@ -35,6 +35,7 @@ forge-20190928.1848
 ghub-20190806.959
 git-commit-20190928.1746
 gntp-0.1
+gnu-elpa-keyring-update-2019.3
 gnupg
 graphql-0.1.1
 hcl-mode-0.3
