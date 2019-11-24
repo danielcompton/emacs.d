@@ -94,7 +94,8 @@ A prefix argument specifies pretty-printing."
      default)))
  '(package-selected-packages
    (quote
-    (gnu-elpa-keyring-update
+    (direnv
+     gnu-elpa-keyring-update
      clj-refactor
      deadgrep
      crux

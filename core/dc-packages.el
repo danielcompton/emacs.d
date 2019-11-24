@@ -187,5 +187,10 @@
   :config
   (setq windmove-wrap-around t))
 
+(use-package direnv
+  :diminish direnv-mode
+  :config
+  (direnv-mode +1))
+
 (provide 'dc-packages)
 ;;; dc-packages.el ends here
