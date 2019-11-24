@@ -150,7 +150,7 @@
   :diminish company-mode
   :config
   (add-hook 'after-init-hook 'global-company-mode)
-  (setq company-idle-delay 0.1
+  (setq company-idle-delay 0.7
         company-minimum-prefix-length 1))
 
 (use-package company-quickhelp
