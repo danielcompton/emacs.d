@@ -1,11 +1,12 @@
+;; Set initial Solarized dark background colour while waiting for
+;; the full Solarized package to load.
+(set-background-color "#002b36")
+
 (when (display-graphic-p)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (tooltip-mode -1)
-  (menu-bar-mode -1)
-
-  )
-
+  (menu-bar-mode -1))
 
 (when (not (eq 'maximized (frame-parameter nil 'fullscreen)))
   (toggle-frame-maximized))
