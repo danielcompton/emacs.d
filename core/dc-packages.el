@@ -58,8 +58,6 @@
 
 (use-package super-save
   :diminish super-save-mode
-  :after (magit ace-window)
-  :demand t
   :config
   (add-to-list 'super-save-triggers 'ace-window)
   (add-to-list 'super-save-triggers 'magit-status)
