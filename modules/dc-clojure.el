@@ -24,7 +24,8 @@
   :bind ("s-r" . cider-ns-refresh)
   :config
   (setq cider-save-file-on-load t
-        cider-ns-save-files-on-refresh t))
+        cider-ns-save-files-on-refresh t
+        cider-prompt-for-symbol nil))
 
 (eval-after-load 'cider
   '(progn
